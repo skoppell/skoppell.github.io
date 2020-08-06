@@ -12,28 +12,30 @@ window.addEventListener('DOMContentLoaded', event => {
         })
         .then(jsonResp => {
             endpoints = jsonResp['endpoints'] || [];
-            imageSpaceElem = document.querySelector('#visible-images-space');
-            let topSpaceElem = document.querySelector('#top-space');
-            let topObserver = new IntersectionObserver(
-                topSpaceIntersectionObsCallBk,
-                {
-                    root: null,
-                    rootMargin: '30%',
-                    threshold: 0,
-                }
-            );
-            topObserver.observe(topSpaceElem);
+            imageSpaceElem = document.querySelector('#container');
+            
+            // let topSpaceElem = document.querySelector('#top-space');
+            // let topObserver = new IntersectionObserver(
+            //     topSpaceIntersectionObsCallBk,
+            //     {
+            //         root: null,
+            //         rootMargin: '30%',
+            //         threshold: 0,
+            //     }
+            // );
+            // topObserver.observe(topSpaceElem);
 
-            let bottomSpaceElem = document.querySelector('#bottom-space');
-            let bottomObserver = new IntersectionObserver(
-                bottomSpaceIntersectionObsCallBk,
-                {
-                    root: null,
-                    rootMargin: '30%',
-                    threshold: 0,
-                }
-            );
-            bottomObserver.observe(bottomSpaceElem);
+            // let bottomSpaceElem = document.querySelector('#bottom-space');
+            // let bottomObserver = new IntersectionObserver(
+            //     bottomSpaceIntersectionObsCallBk,
+            //     {
+            //         root: null,
+            //         rootMargin: '30%',
+            //         threshold: 0,
+            //     }
+            // );
+            // bottomObserver.observe(bottomSpaceElem);
+            createPlaceHoldersForNextBatch();
         })
         .catch(err => {
             console.log(err);
@@ -50,7 +52,7 @@ function createPlaceHoldersForNextBatch() {
         imgEl.classList.add('thumb');
         let observer = new IntersectionObserver(intersectionObsCallBk, {
             root: imageSpaceElem,
-            rootMargin: '30%',
+            rootMargin: '50%',
             threshold: 0,
         });
         observer.observe(imgEl);
