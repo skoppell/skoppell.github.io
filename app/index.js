@@ -71,7 +71,7 @@ function intersectionObsCallBk(entries, observer) {
                     fetch(endpoint)
                         .then(response => response.json())
                         .then(jsonResp => {
-                            const { url: imageURL } = jsonResp;
+                            let { url: imageURL } = jsonResp;
                             if(imgUrlsCache.hasOwnProperty(imageURL)){
                                 elem.classList.add("duplicateImg");
                             }else{
