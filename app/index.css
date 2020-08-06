@@ -47,10 +47,14 @@ body {
     flex-flow: wrap;
 }
 .loaded{
-    
+
 }
 
 #top-space, #bottom-space { 
     width: 100%;
     height: 1px;
+}
+
+.duplicateImg{
+    display: none;
 }
