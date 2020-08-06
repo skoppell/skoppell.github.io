@@ -49,6 +49,7 @@ function createPlaceHoldersForNextBatch() {
         imgEl.setAttribute('src', './dummy.gif');
         imgEl.classList.add('thumb');
         let observer = new IntersectionObserver(intersectionObsCallBk, {
+            root: imageSpaceElem,
             rootMargin: '30%',
             threshold: 0,
         });
