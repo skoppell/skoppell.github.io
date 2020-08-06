@@ -1413,7 +1413,7 @@ let endpoints = [
       imgEl.setAttribute('src', './dummy.gif');
       imgEl.classList.add('thumb');
       let observer = new IntersectionObserver(intersectionObsCallBk, {
-        rootMargin: '20%',
+        rootMargin: '30%',
         threshold: 0,
       });
       observer.observe(imgEl);

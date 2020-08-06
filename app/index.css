@@ -20,7 +20,6 @@ body {
 .thumb {
     width: 250px;
     height: 250px;
-    border: 1px solid #96bb7c;
     padding: .25rem;
     margin: 3rem;
 }
@@ -41,8 +40,14 @@ body {
     padding: 1rem 2rem;
     background: #f5f1da;
 }
+
+#visible-images-space {
+      display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
 .loaded{
-    border-color: red;
+    
 }
 
 #top-space, #bottom-space { 
