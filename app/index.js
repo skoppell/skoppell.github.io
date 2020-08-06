@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', event => {
                 footerSpaceIntersectionObsCallBk,
                 {
                     root: null,
-                    rootMargin: '50%',
+                    rootMargin: '100%',
                     threshold: 0,
                 }
             );
@@ -52,7 +52,7 @@ function createPlaceHoldersForNextBatch() {
         imgEl.classList.add('thumb');
         let observer = new IntersectionObserver(intersectionObsCallBk, {
             root: imageSpaceElem,
-            rootMargin: '50%',
+            rootMargin: '100%',
             threshold: 0,
         });
         observer.observe(imgEl);
