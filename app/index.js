@@ -25,16 +25,16 @@ window.addEventListener('DOMContentLoaded', event => {
             // );
             // topObserver.observe(topSpaceElem);
 
-            // let bottomSpaceElem = document.querySelector('#bottom-space');
-            // let bottomObserver = new IntersectionObserver(
-            //     bottomSpaceIntersectionObsCallBk,
-            //     {
-            //         root: null,
-            //         rootMargin: '30%',
-            //         threshold: 0,
-            //     }
-            // );
-            // bottomObserver.observe(bottomSpaceElem);
+            let footerElem = document.querySelector('#footer');
+            let footerObserver = new IntersectionObserver(
+                footerSpaceIntersectionObsCallBk,
+                {
+                    root: null,
+                    rootMargin: '50%',
+                    threshold: 0,
+                }
+            );
+            footerObserver.observe(footerElem);
             createPlaceHoldersForNextBatch();
         })
         .catch(err => {
@@ -94,7 +94,7 @@ function intersectionObsCallBk(entries, observer) {
     });
 }
 
-function bottomSpaceIntersectionObsCallBk(entries, observer) {
+function footerSpaceIntersectionObsCallBk(entries, observer) {
     entries.forEach(entry => {
         let elem = entry.target;
         if (entry.isIntersecting) {
