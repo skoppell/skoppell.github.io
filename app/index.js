@@ -1410,7 +1410,7 @@ let endpoints = [
       const imgEl = document.createElement('img');
       imgEl.setAttribute('data-index', i + LOADED_TILL_INDEX);
       imgEl.setAttribute('data-api', endpoints[i + LOADED_TILL_INDEX]);
-      imgEl.setAttribute('src', './dummy.png');
+      imgEl.setAttribute('src', './dummy.gif');
       imgEl.classList.add('thumb');
       let observer = new IntersectionObserver(intersectionObsCallBk, {
         rootMargin: '20%',
