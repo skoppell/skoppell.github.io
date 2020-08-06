@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', event => {
         })
         .then(jsonResp => {
             endpoints = jsonResp['endpoints'] || [];
-            imageSpaceElem = document.querySelector('#container');
+            imageSpaceElem = document.querySelector('#visible-images-space');
             
             // let topSpaceElem = document.querySelector('#top-space');
             // let topObserver = new IntersectionObserver(
