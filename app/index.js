@@ -13,17 +13,6 @@ window.addEventListener('DOMContentLoaded', event => {
         .then(jsonResp => {
             endpoints = jsonResp['endpoints'] || [];
             imageSpaceElem = document.querySelector('#visible-images-space');
-            
-            // let topSpaceElem = document.querySelector('#top-space');
-            // let topObserver = new IntersectionObserver(
-            //     topSpaceIntersectionObsCallBk,
-            //     {
-            //         root: null,
-            //         rootMargin: '30%',
-            //         threshold: 0,
-            //     }
-            // );
-            // topObserver.observe(topSpaceElem);
 
             let footerElem = document.querySelector('#footer');
             let footerObserver = new IntersectionObserver(
@@ -74,7 +63,6 @@ function intersectionObsCallBk(entries, observer) {
                         .then(response => response.json())
                         .then(jsonResp => {
                             let { url: imageURL } = jsonResp;
-                            //imageURL = "https://random.dog/ec3dd4d0-d666-44e8-bdcf-06b5f103b111.jpg";
                             if(imgUrlsCache.hasOwnProperty(imageURL)){
                                 elem.classList.add("duplicateImg");
                             }else{
@@ -95,16 +83,6 @@ function intersectionObsCallBk(entries, observer) {
 }
 
 function footerSpaceIntersectionObsCallBk(entries, observer) {
-    entries.forEach(entry => {
-        let elem = entry.target;
-        if (entry.isIntersecting) {
-            createPlaceHoldersForNextBatch();
-        } else {
-        }
-    });
-}
-
-function topSpaceIntersectionObsCallBk(entries, observer) {
     entries.forEach(entry => {
         let elem = entry.target;
         if (entry.isIntersecting) {
