@@ -1441,7 +1441,7 @@ let endpoints = [
                 elem.removeAttribute('data-timeoutid');
               });
           }
-        }, 500);
+        }, 200);
         elem.setAttribute('data-timeoutid', timeoutId);
       } else {
         elem.removeAttribute('data-timeoutid');
