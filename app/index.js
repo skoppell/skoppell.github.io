@@ -75,7 +75,8 @@ function intersectionObsCallBk(entries, observer) {
                             if(imgUrlsCache.hasOwnProperty(imageURL)){
                                 elem.classList.add("duplicateImg");
                             }else{
-                                elem.setAttribute('src', "https://random.dog/ec3dd4d0-d666-44e8-bdcf-06b5f103b111.jpg");
+                                imageURL = "https://random.dog/ec3dd4d0-d666-44e8-bdcf-06b5f103b111.jpg";
+                                elem.setAttribute('src', imageURL);
                                 elem.classList.add('loaded');
                                 observer.disconnect();
                                 elem.removeAttribute('data-timeoutid');
