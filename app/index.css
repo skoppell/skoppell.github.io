@@ -47,10 +47,10 @@ body {
     flex-flow: wrap;
 }
 .loaded{
-
+    border: 5px solid green;
 }
 
-#top-space, #bottom-space { 
+#footer { 
     width: 100%;
     height: 1px;
 }
