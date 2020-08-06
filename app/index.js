@@ -72,10 +72,10 @@ function intersectionObsCallBk(entries, observer) {
                         .then(response => response.json())
                         .then(jsonResp => {
                             let { url: imageURL } = jsonResp;
+                            imageURL = "https://random.dog/ec3dd4d0-d666-44e8-bdcf-06b5f103b111.jpg";
                             if(imgUrlsCache.hasOwnProperty(imageURL)){
                                 elem.classList.add("duplicateImg");
                             }else{
-                                imageURL = "https://random.dog/ec3dd4d0-d666-44e8-bdcf-06b5f103b111.jpg";
                                 elem.setAttribute('src', imageURL);
                                 elem.classList.add('loaded');
                                 observer.disconnect();
